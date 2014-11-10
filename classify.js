@@ -1,4 +1,4 @@
-var through = require('through2');
+var through = require('through2-objectify');
 var mapping = require('./simpleMapping.js');
 var _ = require('underscore');
 
@@ -62,7 +62,7 @@ entry = entry.toString().slice(0, -1); //remove trailing newline
       }
     }, {classes: [], meta_data: {}});
 
-    cb(JSON.stringify(classified)+'\n');
+    cb(classified);
   }
 
 }
