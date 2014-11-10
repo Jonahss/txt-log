@@ -1,14 +1,13 @@
 //json file where the key is a prefix regex. nested keys allow for nested objects
 
-
 var mapping = {
-  "major" : {
-    regex: /1/,
+  "timestamp" : {
+    regex: /\d+/,
     separator: " ",
     parse: function (data) {
       return {
-        foo: "bar",
-        tag: data
+        timestamp: data,
+        date: new Date(parseInt(data)).toString()
       }
     },
     children : {
