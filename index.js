@@ -14,4 +14,8 @@ var newLineify = function(chunk, enc, cb) {
   cb()
 }
 
-log.slice(0).pipe(new classifyStream()).pipe(objectify.deobj(stringify)).pipe(through(newLineify)).pipe(process.stdout);
+log.slice(0)
+  .pipe(new classifyStream())
+  .pipe(objectify.deobj(stringify))
+  .pipe(through(newLineify))
+  .pipe(process.stdout);
