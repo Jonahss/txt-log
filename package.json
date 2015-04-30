@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jonahss",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jade": "^1.7.0",
+    "through2": "^0.6.5",
+    "through2-objectify": "^0.1.1",
+    "underscore": "^1.8.3"
+  }
 }
